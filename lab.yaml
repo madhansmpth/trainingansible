@@ -1,0 +1,14 @@
+- name: play1
+  hosts: localhost 
+  tasks:
+    - name: Testing Ping
+      ansible.builtin.ping:
+    - name: Print Message
+      ansible.builtin.debug:
+        msg: "Task Completed"
+- name: play2
+  hosts: all
+  tasks:
+    - name: Messaging
+      ansible.builtin.debug:
+        msg: "Executing in all Hosts"  
